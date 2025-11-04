@@ -34,11 +34,15 @@ while True:
 for i in range(len(notas)):
     soma += notas[i]
     media = soma / len(notas)
+    maior = max(notas)
+    menor = min(notas)
 
 
 print("A quantidade total de alunos é: ", len(alunos))
 print("A média geral das notas foi de: ", media)
 print("A porcentagem de alunos aprovados foi de: ", (aprov/len(alunos))*100,"%")
+print("A maior nota foi de: ", maior)
+print("A menor nota foi de: ", menor)
 print("----Lista Alunos----")
 
 for i in range(len(alunos)):
