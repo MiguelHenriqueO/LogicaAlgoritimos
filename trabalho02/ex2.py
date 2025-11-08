@@ -1,14 +1,10 @@
 alunos = []
 notas = []
-<<<<<<< HEAD
-media = 0
-=======
 status = []
 soma = 0
 aprov = 0
 reprov = 0
 porcAprov = 0
->>>>>>> 2a347a3ebc9e7daaecb6d984d4f975bdb1234c37
 
 while True:
     opc = input("deseja adicionar um novo aluno? (sim | nao) ")
@@ -35,14 +31,6 @@ while True:
     else:
         print("opção inválida! digite sim ou não")
 
-<<<<<<< HEAD
-for i in notas: 
-    media += notas[i] / len(notas)
-
-print(alunos)
-print(notas)
-print(media)
-=======
 for i in range(len(notas)):
     soma += notas[i]
     media = soma / len(notas)
@@ -59,4 +47,3 @@ print("----Lista Alunos----")
 
 for i in range(len(alunos)):
     print("nome aluno: ", alunos[i], "nota aluno: ", notas[i], "Status aluno: ", status[i])
->>>>>>> 2a347a3ebc9e7daaecb6d984d4f975bdb1234c37

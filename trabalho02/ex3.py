@@ -1,18 +1,46 @@
+def modaNums(num):
+    contagem = {}
+    for n in num:
+        contagem[n] = contagem.get(n,0) + 1
+
+    maiorFreq = max(contagem.values())
+
+    candidatos = []
+    for num, freq in contagem.items():  
+        if freq == maiorFreq:             
+            candidatos.append(num)       
+
+    if len(candidatos) == 1:
+        return candidatos[0]
+    else:
+        return None
+
+
+
+
+
 moda = []
 
-while True:
-    entrada = input("Informe um número ou 'sair' para sair: ").strip().lower()
+qnt = int(input("Informe a quantidade de números usados para fazer a moda: "))
+if qnt <= 1:
+    print("não há moda")
+else:
+    for i in range(qnt):
+        try:
+            inputModa = int(input(f"informe o {i+1} número positivo da lista: "))
+            if inputModa >= 0:    
+                moda.append(inputModa)
+        except ValueError:
+            print("Valor inválido informado, informe um número positivo")
+            break
 
-    if entrada == "sair":
-        break
+    resultado = modaNums(moda)
+    if resultado is None:
+        print("não há moda")
+    else:
+        print(f"A moda é {resultado}")
+    
 
-    try:
-        num = int(entrada)
-        moda.append(num)
-    except ValueError:
-        print("por favor informe um número ou 'sair' para finalizar o programa")
 
-if len(moda) == 0:
-    print("informe pelo menos um número")
 
-print("números informados: ", moda)
+
