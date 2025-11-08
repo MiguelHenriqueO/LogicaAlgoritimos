@@ -1,5 +1,6 @@
 alunos = []
 notas = []
+media = 0
 
 while True:
     opc = input("deseja adicionar um novo aluno? (sim | nao) ")
@@ -15,5 +16,9 @@ while True:
     else:
         print("opção inválida! digite sim ou não")
 
+for i in notas: 
+    media += notas[i] / len(notas)
+
 print(alunos)
 print(notas)
+print(media)
