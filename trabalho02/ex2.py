@@ -22,7 +22,7 @@ while True:
                 reprov = reprov + 1
         else:
             print("nota informada é inválida!, informe uma nota entre 0 e 10")
-    
+
 
 
 
